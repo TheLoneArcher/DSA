@@ -1,5 +1,5 @@
 class twoSum {
-    public static int[] twoSum(int[] nums, int target) {
+    public static int[] findTwoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (complement != -1) {
@@ -13,7 +13,7 @@ class twoSum {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int target = 9;
-        int[] result = twoSum(nums, target);
+        int[] result = findTwoSum(nums, target);
         System.out.println("Indices: " + result[0] + ", " + result[1]);
     }
 }
