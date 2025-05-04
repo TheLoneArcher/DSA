@@ -9,7 +9,7 @@ class Solution(object):
         return rs
 
 # Alternate Solution
-class Solution(object):
+class AltSolution(object):
     def mergeAlternately(self, word1, word2):
         rs = ''
         maximum = max(len(word1), len(word2))
@@ -19,3 +19,17 @@ class Solution(object):
             if i < len(word2):
                 rs += word2[i]
         return rs
+
+# Test Cases
+if __name__ == "__main__":
+    sol = Solution()
+    test_cases = [
+        ("abc", "pqr"),  # Expected: "apbqcr"
+        ("ab", "pqrs"),  # Expected: "apbqrs"
+        ("abcd", "pq"),  # Expected: "apbqcd"
+        ("", ""),        # Expected: ""
+        ("a", ""),      # Expected: "a"
+        ("", "b")       # Expected: "b"
+    ]  
+    for word1, word2 in test_cases:
+        print(f"mergeAlternately({word1}, {word2}) = {sol.mergeAlternately(word1, word2)}")
